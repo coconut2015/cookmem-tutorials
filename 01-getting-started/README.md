@@ -1,8 +1,9 @@
 Tutorial 1: Getting Started
 ===========================
 
-What a memory context is, how to allocate from one, how to free everything
-at once, and how standard containers use one.
+An overview of CookMem: what a memory context is, who CookMem is for, what
+a context can do, and how to start using one.  Later tutorials go deeper
+into each kind of use.
 
 * [Slides](slides.pptx)
 
@@ -16,10 +17,11 @@ Examples
 
 | Example | What it shows |
 |---------|---------------|
-| [01_first_allocation.cpp](examples/01_first_allocation.cpp) | `allocate ()` and `deallocate ()` with a `SimpleMemContext` |
+| [01_first_allocation.cpp](examples/01_first_allocation.cpp) | `allocate ()`, `reallocate ()` and `deallocate ()`, like `malloc`, `realloc` and `free` |
 | [02_release_all.cpp](examples/02_release_all.cpp) | Freeing everything at once with `releaseAll ()` |
 | [03_stl_allocator.cpp](examples/03_stl_allocator.cpp) | `std::vector` and `std::list` with `cookmem::Allocator` |
 | [04_pmr.cpp](examples/04_pmr.cpp) | `std::pmr` containers with `cookmem::MemResource` (C++17) |
+| [05_checks_and_limits.cpp](examples/05_checks_and_limits.cpp) | Padding checks, a footprint limit and a leak report |
 
 See [Building the Examples](../README.md#building-the-examples) to build and
 run them.

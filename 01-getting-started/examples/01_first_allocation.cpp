@@ -13,7 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-// Allocate and free memory from a memory context, like malloc and free.
+// Allocate, resize and free memory from a memory context, like malloc,
+// realloc and free.
 #include <cstring>
 #include <iostream>
 
@@ -26,15 +27,18 @@ main ()
     // Unix, VirtualAlloc on Windows) and hands out small pieces of them.
     cookmem::SimpleMemContext<> memCtx;
 
+    // Allocate, like malloc.
     const char hello[] = "Hello, CookMem";
     char* text = static_cast<char*> (memCtx.allocate (32));
     std::memcpy (text, hello, sizeof (hello));
     std::cout << text << "\n";
 
-    // The memory is still owned by memCtx, which can tell its size.
-    // Expect output 32 bytes
+    // Grow it, like realloc.  The contents are kept.
+    text = static_cast<char*> (memCtx.reallocate (text, 64));
+    // Expect output 64 bytes
     std::cout << memCtx.getSize (text) << " bytes\n";
 
+    // Free it, like free.
     memCtx.deallocate (text);
     return 0;
 }

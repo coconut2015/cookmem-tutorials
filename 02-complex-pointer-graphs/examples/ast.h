@@ -23,7 +23,7 @@
 #include <stdexcept>
 #include <string>
 
-#include "make.h"
+#include "context.h"
 
 // An expression node.  Its name and children come from the same context as
 // the node, so the whole tree owns nothing but memory from that context.

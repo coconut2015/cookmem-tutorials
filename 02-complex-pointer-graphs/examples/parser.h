@@ -89,7 +89,7 @@ private:
         skipSpaces ();
         if (accept ('-'))
         {
-            Node* node = make<Node> (m_memCtx, Node::NEGATE);
+            Node* node = m_memCtx.create<Node> (m_memCtx, Node::NEGATE);
             node->children.push_back (parseFactor ());
             return node;
         }
@@ -102,7 +102,7 @@ private:
         if (std::isdigit (static_cast<unsigned char> (*m_pos)) || *m_pos == '.')
         {
             char* end;
-            Node* node = make<Node> (m_memCtx, Node::NUMBER);
+            Node* node = m_memCtx.create<Node> (m_memCtx, Node::NUMBER);
             node->value = std::strtod (m_pos, &end);
             m_pos = end;
             return node;
@@ -116,7 +116,7 @@ private:
             }
             if (accept ('('))
             {
-                Node* node = make<Node> (m_memCtx, Node::CALL);
+                Node* node = m_memCtx.create<Node> (m_memCtx, Node::CALL);
                 node->name.assign (start, nameLength (start));
                 do
                 {
@@ -126,7 +126,7 @@ private:
                 expect (')');
                 return node;
             }
-            Node* node = make<Node> (m_memCtx, Node::VARIABLE);
+            Node* node = m_memCtx.create<Node> (m_memCtx, Node::VARIABLE);
             node->name.assign (start, nameLength (start));
             return node;
         }
@@ -137,7 +137,7 @@ private:
     Node*
     binary (char op, Node* left, Node* right)
     {
-        Node* node = make<Node> (m_memCtx, Node::BINARY);
+        Node* node = m_memCtx.create<Node> (m_memCtx, Node::BINARY);
         node->op = op;
         node->children.push_back (left);
         node->children.push_back (right);

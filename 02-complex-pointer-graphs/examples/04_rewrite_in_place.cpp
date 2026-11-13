@@ -24,7 +24,7 @@
 static Node*
 number (Context& memCtx, double value)
 {
-    Node* node = make<Node> (memCtx, Node::NUMBER);
+    Node* node = memCtx.create<Node> (memCtx, Node::NUMBER);
     node->value = value;
     return node;
 }
@@ -37,9 +37,9 @@ fold (Context& memCtx, Node* node)
     Node* left = node->children[0];
     Node* right = node->children[1];
     Node* result = number (memCtx, evaluate (node, Variables ()));
-    destroy (memCtx, left);
-    destroy (memCtx, right);
-    destroy (memCtx, node);     // also frees its list of children
+    memCtx.destroy (left);
+    memCtx.destroy (right);
+    memCtx.destroy (node);     // also frees its list of children
     return result;
 }
 
@@ -49,7 +49,7 @@ main ()
     Context memCtx;
 
     // A call with 100 arguments: min(0, 1, 2, ..., 99).
-    Node* call = make<Node> (memCtx, Node::CALL);
+    Node* call = memCtx.create<Node> (memCtx, Node::CALL);
     call->name = "min";
     for (int i = 0; i < 100; ++i)
     {
@@ -61,7 +61,7 @@ main ()
     {
         // An edit replaces one argument with (i + 1)...
         std::size_t i = pass % call->children.size ();
-        Node* sum = make<Node> (memCtx, Node::BINARY);
+        Node* sum = memCtx.create<Node> (memCtx, Node::BINARY);
         sum->op = '+';
         sum->children.push_back (call->children[i]);
         sum->children.push_back (number (memCtx, 1));

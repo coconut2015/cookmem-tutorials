@@ -19,7 +19,7 @@
 #include <initializer_list>
 #include <iostream>
 
-#include "make.h"
+#include "context.h"
 
 // A basic block of a function.  Its edges point in both directions, so the
 // graph is full of cycles.
@@ -50,12 +50,12 @@ main ()
     Context memCtx;
 
     // for (i = 0; i < n; ++i) { if (a[i]) sum += a[i]; } return sum;
-    Block* entry = make<Block> (memCtx, "entry");
-    Block* loop = make<Block> (memCtx, "loop");
-    Block* test = make<Block> (memCtx, "test");
-    Block* add = make<Block> (memCtx, "add");
-    Block* next = make<Block> (memCtx, "next");
-    Block* exit = make<Block> (memCtx, "exit");
+    Block* entry = memCtx.create<Block> (memCtx, "entry");
+    Block* loop = memCtx.create<Block> (memCtx, "loop");
+    Block* test = memCtx.create<Block> (memCtx, "test");
+    Block* add = memCtx.create<Block> (memCtx, "add");
+    Block* next = memCtx.create<Block> (memCtx, "next");
+    Block* exit = memCtx.create<Block> (memCtx, "exit");
     link (entry, loop);
     link (loop, test);
     link (loop, exit);

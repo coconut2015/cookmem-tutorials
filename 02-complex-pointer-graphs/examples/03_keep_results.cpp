@@ -58,7 +58,7 @@ main ()
 
             // Copy the result into the session before work is released.
             String name (def[0], cookmem::Allocator<char> (work));
-            definitions.push_back (make<Definition> (session, name, value));
+            definitions.push_back (session.create<Definition> (session, name, value));
         }
         std::cout << "Work context footprint: " << work.getFootprint () << "\n";
 

@@ -21,7 +21,7 @@ The tutorials follow those audiences.
 | # | Tutorial | For | Status |
 |---|----------|-----|--------|
 | 1 | [Getting Started](01-getting-started/) ([slides](01-getting-started/slides.pptx), [examples](01-getting-started/examples/)) | Everyone | Available |
-| 2 | Complex Pointer Graphs | Compilers, parsers, database engines | Planned |
+| 2 | [Complex Pointer Graphs](02-complex-pointer-graphs/) ([slides](02-complex-pointer-graphs/slides.pptx), [examples](02-complex-pointer-graphs/examples/)) | Compilers, parsers, database engines | Available |
 | 3 | Single-Threaded Performance | Performance-critical code | Planned |
 | 4 | Debugging Without Valgrind | Services that Valgrind cannot run | Planned |
 | 5 | Limiting Memory Use | Sandboxing third-party code | Planned |

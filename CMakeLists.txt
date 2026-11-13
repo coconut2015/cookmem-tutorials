@@ -37,3 +37,4 @@ function (add_example name source)
 endfunction ()
 
 add_subdirectory (01-getting-started/examples)
+add_subdirectory (02-complex-pointer-graphs/examples)

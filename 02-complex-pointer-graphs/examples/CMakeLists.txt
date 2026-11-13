@@ -1,0 +1,5 @@
+add_example (t02_expression_ast 01_expression_ast.cpp)
+add_example (t02_cyclic_graph 02_cyclic_graph.cpp)
+add_example (t02_keep_results 03_keep_results.cpp)
+add_example (t02_rewrite_in_place 04_rewrite_in_place.cpp)
+add_example (t02_per_request 05_per_request.cpp)

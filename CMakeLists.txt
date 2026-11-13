@@ -38,3 +38,4 @@ endfunction ()
 
 add_subdirectory (01-getting-started/examples)
 add_subdirectory (02-complex-pointer-graphs/examples)
+add_subdirectory (03-single-threaded-performance/examples)

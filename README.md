@@ -22,7 +22,7 @@ The tutorials follow those audiences.
 |---|----------|-----|--------|
 | 1 | [Getting Started](01-getting-started/) ([slides](01-getting-started/slides.pptx), [examples](01-getting-started/examples/)) | Everyone | Available |
 | 2 | [Complex Pointer Graphs](02-complex-pointer-graphs/) ([slides](02-complex-pointer-graphs/slides.pptx), [examples](02-complex-pointer-graphs/examples/)) | Compilers, parsers, database engines | Available |
-| 3 | Single-Threaded Performance | Performance-critical code | Planned |
+| 3 | [Single-Threaded Performance](03-single-threaded-performance/) ([slides](03-single-threaded-performance/slides.pptx), [examples](03-single-threaded-performance/examples/)) | Performance-critical code | Available |
 | 4 | Debugging Without Valgrind | Services that Valgrind cannot run | Planned |
 | 5 | Limiting Memory Use | Sandboxing third-party code | Planned |
 
@@ -44,7 +44,9 @@ ctest --test-dir build
 ```
 
 To try another CookMem release, pass `-DCOOKMEM_TAG=<tag>` to the first
-command.
+command.  To measure performance, as in tutorial 3, build in Release mode:
+pass `-DCMAKE_BUILD_TYPE=Release` to the first command, or with Visual
+Studio, `--config Release` to the build and `-C Release` to ctest.
 
 License
 -------

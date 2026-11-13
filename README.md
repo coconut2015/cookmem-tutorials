@@ -3,7 +3,8 @@ CookMem Tutorials
 
 Tutorials for [CookMem](https://github.com/coconut2015/cookmem), a
 header-only C++11 memory context and allocator based on dlmalloc.  Each
-tutorial has slides and example programs; some will also have a video.
+tutorial has slides, and tutorials 1 to 5 have example programs; some will
+also have a video.
 
 The examples are built and run by CI against the CookMem release named in
 [CMakeLists.txt](CMakeLists.txt) (currently `v1.5.1`).
@@ -26,7 +27,7 @@ tutorial 6 looks at replacing `malloc` and `new` for a whole program.
 | 3 | [Single-Threaded Performance](03-single-threaded-performance/) ([slides](03-single-threaded-performance/slides.pptx), [examples](03-single-threaded-performance/examples/)) | Performance-critical code | Available |
 | 4 | [Debugging Without Valgrind](04-debugging-without-valgrind/) ([slides](04-debugging-without-valgrind/slides.pptx), [examples](04-debugging-without-valgrind/examples/)) | Services that Valgrind cannot run | Available |
 | 5 | [Limiting Memory Use](05-limiting-memory-use/) ([slides](05-limiting-memory-use/slides.pptx), [examples](05-limiting-memory-use/examples/)) | Sandboxing third-party code | Available |
-| 6 | Replacing malloc and new | Anyone considering a global allocator | Planned |
+| 6 | [Replacing malloc and new](06-replacing-malloc-and-new/) ([slides](06-replacing-malloc-and-new/slides.pptx)) | Anyone considering a global allocator | Available |
 
 PDF exports of the slides are attached to the
 [releases](https://github.com/coconut2015/cookmem-tutorials/releases).

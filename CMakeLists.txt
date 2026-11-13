@@ -5,7 +5,7 @@ project (CookMemTutorials CXX)
 
 # The CookMem release the tutorials are written for.  Update it with each
 # CookMem release, and fix any example that no longer builds or runs.
-set (COOKMEM_TAG "v1.5.1" CACHE STRING "CookMem tag to build the examples with")
+set (COOKMEM_TAG "v1.6.0" CACHE STRING "CookMem tag to build the examples with")
 
 include (FetchContent)
 FetchContent_Declare (cookmem

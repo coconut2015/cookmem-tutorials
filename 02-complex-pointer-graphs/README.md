@@ -27,7 +27,7 @@ Examples
 
 The helpers they share:
 
-* [make.h](examples/make.h): `make<T> ()` and `destroy ()`, and the
+* [context.h](examples/context.h): the context type, and the
   context-backed `String` and `List` types.
 * [ast.h](examples/ast.h): the expression node, `print ()` and `evaluate ()`.
 * [parser.h](examples/parser.h): the parser.

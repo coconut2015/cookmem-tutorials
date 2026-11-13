@@ -7,7 +7,7 @@ tutorial has slides, and tutorials 1 to 5 have example programs; some will
 also have a video.
 
 The examples are built and run by CI against the CookMem release named in
-[CMakeLists.txt](CMakeLists.txt) (currently `v1.5.1`).
+[CMakeLists.txt](CMakeLists.txt) (currently `v1.6.0`).
 
 CookMem is not a drop-in replacement for `malloc`: code allocates from a
 memory context explicitly, one thread at a time.  See

@@ -6,7 +6,7 @@ header-only C++11 memory context and allocator based on dlmalloc.  Each
 tutorial has slides and example programs; some will also have a video.
 
 The examples are built and run by CI against the CookMem release named in
-[CMakeLists.txt](CMakeLists.txt) (currently `v1.5.0`).
+[CMakeLists.txt](CMakeLists.txt) (currently `v1.5.1`).
 
 CookMem is not a drop-in replacement for `malloc`: code allocates from a
 memory context explicitly, one thread at a time.  See

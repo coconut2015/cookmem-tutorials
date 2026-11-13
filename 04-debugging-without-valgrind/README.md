@@ -35,10 +35,6 @@ Examples
 [numbering_logger.h](examples/numbering_logger.h) is the numbering logger
 used by examples 04 and 06.
 
-With CookMem 1.5.0, store exact sizes when you use `StatsLogger`, with
-padding or `setStoringExactSize (true)`: its byte counts are wrong without
-them.  The next release of CookMem fixes this.
-
 See [Building the Examples](../README.md#building-the-examples) to build and
 run them; build in Release mode to measure.
 

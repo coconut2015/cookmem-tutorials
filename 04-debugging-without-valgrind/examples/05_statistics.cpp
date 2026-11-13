@@ -23,7 +23,7 @@
 typedef cookmem::SimpleMemContext<cookmem::MmapArena, cookmem::StatsLogger> Context;
 
 static void
-report (const char* phase, Context& memCtx)
+report (const char* phase, const Context& memCtx)
 {
     const cookmem::MemStatistics& stats = memCtx.getLogger ().getStats ();
     std::cout << phase << ": " << stats.getCurrentAllocated () << " bytes in use, peak "
@@ -35,9 +35,6 @@ int
 main ()
 {
     Context memCtx;
-    // Store the exact size of each allocation.  CookMem 1.5.0 counts the
-    // bytes of StatsLogger wrongly without it; the next release fixes that.
-    memCtx.setStoringExactSize (true);
     std::vector<void*> cache;    // a cache that is never trimmed: the bug
 
     for (int phase = 1; phase <= 3; ++phase)

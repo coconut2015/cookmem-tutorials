@@ -81,10 +81,12 @@ public:
     void logFreeSegment (void*, std::size_t) { }
     void logTrimEmptySegments () { }
 
+    // Errors are reported by throwing, like the loggers of CookMem.
     void
-    logError (void*, cookmem::MemError_et error, const char* file = __FILE__, int line = __LINE__)
+    logError (void*, cookmem::MemError_et error, const char* message,
+              const char* file = __FILE__, int line = __LINE__)
     {
-        throw cookmem::Exception (error, "memory corruption detected.", file, line);
+        throw cookmem::Exception (error, message, file, line);
     }
 
 private:

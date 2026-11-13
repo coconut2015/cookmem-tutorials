@@ -30,7 +30,10 @@ function (add_example name source)
     set_target_properties (${name} PROPERTIES
         CXX_STANDARD ${ARG_CXX_STANDARD}
         CXX_STANDARD_REQUIRED ON)
-    if (NOT MSVC)
+    if (MSVC)
+        # The examples use getenv and similar standard functions.
+        target_compile_definitions (${name} PRIVATE _CRT_SECURE_NO_WARNINGS)
+    else ()
         target_compile_options (${name} PRIVATE -Wall -Wextra)
     endif ()
     add_test (NAME ${name} COMMAND ${name})
@@ -39,3 +42,4 @@ endfunction ()
 add_subdirectory (01-getting-started/examples)
 add_subdirectory (02-complex-pointer-graphs/examples)
 add_subdirectory (03-single-threaded-performance/examples)
+add_subdirectory (04-debugging-without-valgrind/examples)

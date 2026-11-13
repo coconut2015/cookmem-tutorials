@@ -6,7 +6,7 @@ tutorial is not only about CookMem: it looks at the ways an allocator can
 take over a program's memory, from replacing `malloc` and `free` to an
 explicit allocator, and at what each one gains and risks.
 
-* [Slides](slides.pptx)
+* Slides: [PowerPoint](slides.pptx), [PDF](slides.pdf)
 
 There are no example programs.  The code on the slides is a sketch of each
 approach, not a complete replacement, and it is not built.

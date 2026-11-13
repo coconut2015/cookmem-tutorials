@@ -5,7 +5,7 @@ An overview of CookMem: what a memory context is, who CookMem is for, what
 a context can do, and how to start using one.  Later tutorials go deeper
 into each kind of use.
 
-* [Slides](slides.pptx)
+* Slides: [PowerPoint](slides.pptx), [PDF](slides.pdf)
 
 Freeing everything at once does not call destructors, so C++ RAII does not
 happen.  It suits objects that own nothing but memory from the same context,

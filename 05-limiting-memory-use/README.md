@@ -14,7 +14,7 @@ thread-local context, keeps the total in memory; a worker that reaches its
 budget spills to disk, processes smaller batches, or waits, as database
 engines do for each sort or hash join (PostgreSQL's `work_mem`).
 
-* [Slides](slides.pptx)
+* Slides: [PowerPoint](slides.pptx), [PDF](slides.pdf)
 
 The limit covers only memory allocated through the context.  Code that calls
 `malloc` or `new` directly bypasses it, so this is not process isolation.

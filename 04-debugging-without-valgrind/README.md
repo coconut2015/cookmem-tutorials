@@ -8,7 +8,7 @@ writes past the end of an allocation, double frees throw, and
 context separately, so you can turn them on with a startup setting when a
 problem needs to be reproduced.
 
-* [Slides](slides.pptx)
+* Slides: [PowerPoint](slides.pptx), [PDF](slides.pdf)
 
 CookMem complements Valgrind and AddressSanitizer; it does not replace them.
 It does not see reads, so it cannot catch out-of-bounds reads or use after

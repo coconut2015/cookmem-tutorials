@@ -22,15 +22,14 @@ tutorial 6 looks at replacing `malloc` and `new` for a whole program.
 
 | # | Tutorial | For | Status |
 |---|----------|-----|--------|
-| 1 | [Getting Started](01-getting-started/) ([slides](01-getting-started/slides.pptx), [examples](01-getting-started/examples/)) | Everyone | Available |
-| 2 | [Complex Pointer Graphs](02-complex-pointer-graphs/) ([slides](02-complex-pointer-graphs/slides.pptx), [examples](02-complex-pointer-graphs/examples/)) | Compilers, parsers, database engines | Available |
-| 3 | [Single-Threaded Performance](03-single-threaded-performance/) ([slides](03-single-threaded-performance/slides.pptx), [examples](03-single-threaded-performance/examples/)) | Performance-critical code | Available |
-| 4 | [Debugging Without Valgrind](04-debugging-without-valgrind/) ([slides](04-debugging-without-valgrind/slides.pptx), [examples](04-debugging-without-valgrind/examples/)) | Services that Valgrind cannot run | Available |
-| 5 | [Limiting Memory Use](05-limiting-memory-use/) ([slides](05-limiting-memory-use/slides.pptx), [examples](05-limiting-memory-use/examples/)) | Sandboxing third-party code | Available |
-| 6 | [Replacing malloc and new](06-replacing-malloc-and-new/) ([slides](06-replacing-malloc-and-new/slides.pptx)) | Anyone considering a global allocator | Available |
+| 1 | [Getting Started](01-getting-started/) ([slides](01-getting-started/slides.pptx), [PDF](01-getting-started/slides.pdf), [examples](01-getting-started/examples/)) | Everyone | Available |
+| 2 | [Complex Pointer Graphs](02-complex-pointer-graphs/) ([slides](02-complex-pointer-graphs/slides.pptx), [PDF](02-complex-pointer-graphs/slides.pdf), [examples](02-complex-pointer-graphs/examples/)) | Compilers, parsers, database engines | Available |
+| 3 | [Single-Threaded Performance](03-single-threaded-performance/) ([slides](03-single-threaded-performance/slides.pptx), [PDF](03-single-threaded-performance/slides.pdf), [examples](03-single-threaded-performance/examples/)) | Performance-critical code | Available |
+| 4 | [Debugging Without Valgrind](04-debugging-without-valgrind/) ([slides](04-debugging-without-valgrind/slides.pptx), [PDF](04-debugging-without-valgrind/slides.pdf), [examples](04-debugging-without-valgrind/examples/)) | Services that Valgrind cannot run | Available |
+| 5 | [Limiting Memory Use](05-limiting-memory-use/) ([slides](05-limiting-memory-use/slides.pptx), [PDF](05-limiting-memory-use/slides.pdf), [examples](05-limiting-memory-use/examples/)) | Sandboxing third-party code | Available |
+| 6 | [Replacing malloc and new](06-replacing-malloc-and-new/) ([slides](06-replacing-malloc-and-new/slides.pptx), [PDF](06-replacing-malloc-and-new/slides.pdf)) | Anyone considering a global allocator | Available |
 
-PDF exports of the slides are attached to the
-[releases](https://github.com/coconut2015/cookmem-tutorials/releases).
+Each tutorial has its slides as PowerPoint and as a PDF export.
 For reference documentation, see the
 [CookMem documentation](https://coconut2015.github.io/cookmem/).
 

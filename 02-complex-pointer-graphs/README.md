@@ -7,7 +7,7 @@ build state for each request.  Give each lifetime its own memory context,
 allocate the graph from it, and release the whole graph in one call, cycles
 and all.
 
-* [Slides](slides.pptx)
+* Slides: [PowerPoint](slides.pptx), [PDF](slides.pdf)
 
 Releasing a context does not call destructors, so C++ RAII does not happen.
 The objects in these examples hold only plain values, pointers into the same

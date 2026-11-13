@@ -7,7 +7,7 @@ every `malloc` and `free`; a memory context belongs to one thread at a
 time, so it never locks.  You also choose the scope of a context: a thread,
 a block of code, or any lifetime you own.
 
-* [Slides](slides.pptx)
+* Slides: [PowerPoint](slides.pptx), [PDF](slides.pdf)
 
 On one machine (AMD Ryzen 7 5800H), a context per thread was 1.6 to 1.9
 times faster than the Windows heap, and 1.1 to 1.4 times faster than glibc's

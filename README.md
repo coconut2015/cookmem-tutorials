@@ -16,7 +16,8 @@ for the kinds of programs it helps most.
 Tutorials
 ---------
 
-The tutorials follow those audiences.
+Tutorial 1 is an overview, tutorials 2 to 5 follow those audiences, and
+tutorial 6 looks at replacing `malloc` and `new` for a whole program.
 
 | # | Tutorial | For | Status |
 |---|----------|-----|--------|
@@ -24,7 +25,8 @@ The tutorials follow those audiences.
 | 2 | [Complex Pointer Graphs](02-complex-pointer-graphs/) ([slides](02-complex-pointer-graphs/slides.pptx), [examples](02-complex-pointer-graphs/examples/)) | Compilers, parsers, database engines | Available |
 | 3 | [Single-Threaded Performance](03-single-threaded-performance/) ([slides](03-single-threaded-performance/slides.pptx), [examples](03-single-threaded-performance/examples/)) | Performance-critical code | Available |
 | 4 | [Debugging Without Valgrind](04-debugging-without-valgrind/) ([slides](04-debugging-without-valgrind/slides.pptx), [examples](04-debugging-without-valgrind/examples/)) | Services that Valgrind cannot run | Available |
-| 5 | Limiting Memory Use | Sandboxing third-party code | Planned |
+| 5 | [Limiting Memory Use](05-limiting-memory-use/) ([slides](05-limiting-memory-use/slides.pptx), [examples](05-limiting-memory-use/examples/)) | Sandboxing third-party code | Available |
+| 6 | Replacing malloc and new | Anyone considering a global allocator | Planned |
 
 PDF exports of the slides are attached to the
 [releases](https://github.com/coconut2015/cookmem-tutorials/releases).
